@@ -121,6 +121,4 @@ gitautomata/
 5. Escrever **docs de “como criar automações”**.
 6. Criar CLI inicial (`run`, `init`).
 
----
 
-Quer que eu desenhe também uma **arquitetura de alto nível (diagrama)** mostrando como webhooks → automations → GitHub API interagem?
