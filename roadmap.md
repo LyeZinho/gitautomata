@@ -181,6 +181,7 @@ gitautomata/
 * [ ] **Release notes** (gera release automaticamente no GitHub a cada tag)
 * [ ] **Slack/Discord notifier** (notifica em canais externos ao receber PR/Issue)
 * [ ] **Hello-world automation** (demonstração básica de evento → ação)
+* [ ] **Script run on demand** (demonstração de Scripts acionados com eventos pre-configurados )
 
 ---
 
