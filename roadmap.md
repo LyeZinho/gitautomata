@@ -121,4 +121,73 @@ gitautomata/
 5. Escrever **docs de “como criar automações”**.
 6. Criar CLI inicial (`run`, `init`).
 
+---
 
+# ✅ Checklist de Implementação — gitautomata
+
+### 🔧 Infra & Setup
+
+* [ ] Criar repositório inicial com Node.js + TypeScript
+* [ ] Configurar `eslint` + `prettier`
+* [ ] Configurar `jest` ou `vitest` para TDD
+* [ ] Configurar CI/CD básico (lint + testes rodando no PR)
+* [ ] Adicionar suporte a variáveis de ambiente (`dotenv`)
+* [ ] Criar `Dockerfile` + `docker-compose.yml` (para self-hosted)
+
+---
+
+### 🧩 Core (engine do projeto)
+
+* [ ] Implementar **wrapper da GitHub API** (baseado no `octokit`)
+* [ ] Implementar **sistema de automations** (interface `onPush`, `onPR`, etc.)
+* [ ] Implementar **runner** para executar automações (manual e via webhook)
+* [ ] Implementar **servidor webhook** (`/webhook/github`)
+* [ ] Criar **roteador de eventos** (eventos GitHub → automações registradas)
+* [ ] Suporte para rodar automações localmente via CLI
+
+---
+
+### 💻 CLI
+
+* [ ] Comando `gitautomata init` → cria estrutura inicial de automação
+* [ ] Comando `gitautomata run <automation>` → executa script local
+* [ ] Comando `gitautomata list` → lista automações disponíveis
+* [ ] Comando `gitautomata test` → roda testes de automações
+
+---
+
+### 🧪 Testes
+
+* [ ] Testes unitários para core (`runner`, `github`, `webhook`)
+* [ ] Testes de integração (simulação de webhook com eventos reais do GitHub)
+* [ ] Testes end-to-end para execução de automações completas
+
+---
+
+### 📖 Documentação
+
+* [ ] `README.md` inicial (visão geral + como rodar local)
+* [ ] `docs/getting-started.md` (setup rápido)
+* [ ] `docs/creating-automations.md` (como criar automações passo a passo)
+* [ ] `docs/api-reference.md` (funções do wrapper GitHub + CLI)
+* [ ] Exemplos prontos em `examples/`
+
+---
+
+### 🤖 Automations (exemplos iniciais)
+
+* [ ] **Auto-label issues** (adiciona labels com base no título ou conteúdo)
+* [ ] **Auto-merge PRs** (merge automático se todos os checks passarem)
+* [ ] **Release notes** (gera release automaticamente no GitHub a cada tag)
+* [ ] **Slack/Discord notifier** (notifica em canais externos ao receber PR/Issue)
+* [ ] **Hello-world automation** (demonstração básica de evento → ação)
+
+---
+
+### 🔮 Futuro / Extras (talvez seja implementado)
+
+* [ ] Dashboard web (opcional) para visualizar automações rodando
+* [ ] Suporte a banco de dados (SQLite/Postgres) para armazenar histórico
+* [ ] Hooks customizados (além do GitHub, permitir gatilhos externos)
+* [ ] Suporte multi-repo com configuração centralizada
+* [ ] Plugins da comunidade
